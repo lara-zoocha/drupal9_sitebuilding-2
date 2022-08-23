@@ -1,0 +1,4 @@
+name: 'my test core'
+description: 'my test core description'
+type: module
+core_version_requirement: '^8.9 || ^9'

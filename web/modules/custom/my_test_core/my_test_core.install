@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Enable module: color_field.
+ */
+function my_test_core_update_9001() {
+  \Drupal::service('module_installer')->install(['color_field']);
+}
+
+/**
+ * Enable module: color_fielppksm
+ */
+function my_test_core_update_9002() {
+  \Drupal::service('module_installer')->install(['color_field']);
+}
+
+/**
+ * Enable module: field_group
+ */
+function my_test_core_update_9003() {
+  \Drupal::service('module_installer')->install(['field_group']);
+}
+
+/**
+ * Enable module: features
+ */
+function my_test_core_update_9004() {
+  \Drupal::service('module_installer')->install(['features']);
+}
+
+/**
+ * Enable module: my_test_vehicles
+ */
+function my_test_core_update_9005() {
+  \Drupal::service('module_installer')->install(['my_test_vehicles']);
+}
