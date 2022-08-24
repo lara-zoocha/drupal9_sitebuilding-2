@@ -1,0 +1,22 @@
+# THEMENAME.info.yml file for Fluffiness example theme.
+name: Fluffiness
+type: theme
+base theme: classy
+description: 'A great theme.'
+package: Custom
+core_version_requirement: ^8 || ^9
+screenshot: screenshot.jpg
+
+#libraries
+libraries:
+  - fluffiness/global
+
+logo: images/logo.png
+
+# Region metadata.
+regions:
+  header: 'Header'
+  highlighted: 'Highlighted'
+  content: 'Content'
+  sidebar_second: 'Right sidebar'
+  footer: 'Footer'
