@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Component\Utility\Unicode;
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ * Add content type theme hook suggestions.
+ */
+function fluffiness_theme_suggestions_page_alter(&$suggestions) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    if (!is_object($node)) {
+      $node = \Drupal::request()->attributes->get('node_revision');
+      $node = \Drupal::entityTypeManager()
+        ->getStorage('node')
+        ->loadRevision($node);
+    }
+    if (is_object($node)) {
+      array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function theme_preprocess_paragraph(&$variables) {
+}
+
+//function fluffiness_preprocess_maintenance_page(&$variables) {
+//  $variables['#attached']['library'][] = 'fluffiness/cuddly-slider';
+//}
+
+/**
+ * Preprocess function for node.html.twig.
+ */
+//function fluffiness_preprocess_node(&$variables) {
+//  // If the current user is logged in, and they are the owner of the node
+//  // being viewed, add a suffix to the label variable.
+//  $variables['attributes']['class'][] = 'zoocha';
+//  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+//    $variables['label']['#suffix'] = ' [you are the author]';
+//  }
+//}
+
+
+/**
+ * Implements hook_preprocess_node().
+ * function fluffiness_preprocess_page(&$variables) {
+ *   $a = 1;
+ * }
+ */
