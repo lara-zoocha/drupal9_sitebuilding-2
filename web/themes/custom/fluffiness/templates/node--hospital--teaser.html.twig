@@ -67,50 +67,30 @@
  *
  */
 #}
-{%
-  set classes = [
+
+{% set classes1 = [
   'node',
+  'hospital-teaser',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-]
-%}
-
+] %}
 
 {{ attach_library('fluffiness/global') }}
 
-{#{{ dump () }}#}
-
-<article{{ attributes.addClass(classes) }}>
-
-  {# TITULO EN LA FRONTPAGE #}
-  {{ title_prefix }}
-
-  <h2 class="title node__title node__title--article" {{ title_attributes }}>
-    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-  </h2>
-
-  {{ title_suffix }}
-
-
-  <div class="article-tags">
-    {{ content.field_tags }}
-  </div>
-
-  {% if display_submitted %}
-    <div class="node__meta article__date">
-
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %} Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+<div class="hospital-teaser__container">
+  <div{{ attributes.addClass(classes1) }}>
+    {# TITULO & BODY #}
+    <div class="hospital-teaser__content">
+      <h2 class="title node__title node__title--hospital" {{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+      <div class="hospital-teaser__content">
+        {{ content|without('field_tags') }}
       </div>
-
     </div>
-  {% endif %}
-
-
-</article>
-
-
+  </div>
+  <hr class="teaser__hr">
+</div>

@@ -70,26 +70,21 @@
 
 {{ attach_library('fluffiness/articles') }}
 
-{%
-  set classes = [
+{% set classes = [
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-]
-%}
-
+] %}
 
 <article{{ attributes.addClass(classes) }} style="background-color: {{ maria }}">
 
-  {%
-    set classes2 = [
+  {% set classes2 = [
     'title',
     'node__title',
-  ]
-  %}
+  ] %}
 
   {{ title_prefix }}
   <h2 {{ attributes.addClass(classes2) }} {{ title_attributes }}>
@@ -97,31 +92,23 @@
   </h2>
   {{ title_suffix }}
 
-{#  content with sidebar#}
-
+  {#  content with sidebar #}
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content|without('comment', 'body', 'field_tags', 'field_image', 'field_article_date') }}
-
     <div class="article__date">
-      {{ content.field_article_date}}
+      {{ content.field_article_date }}
     </div>
     <hr>
     <div class="article__image">
-      {{ content.field_image}}
+      {{ content.field_image }}
       <div class="article__image-alt">
         {{ content.field_image['#items'].alt }}
       </div>
     </div>
-
-
-
     <div class="article__body">
-      {{ content.body}}
+      {{ content.body }}
     </div>
-
   </div>
-
-{#  -> include sidebar #}
 </article>
 
 

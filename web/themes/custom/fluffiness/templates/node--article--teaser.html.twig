@@ -85,6 +85,10 @@
 
 <div class="article-teaser__container">
   <article{{ attributes.addClass(classes1) }}>
+    {# IMAGE #}
+    <div class="article-teaser__image">
+      {{ content.field_image}}
+    </div>
     {# TITULO & BODY #}
     <div class="article-teaser__content">
       <h2 class="title node__title node__title--article" {{ title_attributes }}>
@@ -94,10 +98,7 @@
         {{ content|without('field_tags', 'field_image') }}
       </div>
     </div>
-    {# IMAGE #}
-    <div class="article-teaser__image">
-      {{ content.field_image}}
-    </div>
+
   </article>
-  <hr>
+  <hr class="teaser__hr">
 </div>

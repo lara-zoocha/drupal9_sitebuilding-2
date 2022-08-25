@@ -1,18 +1,18 @@
+@import "layout/breakpoints.css";
+
 .node__title {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 110%;
+  font-size: 30px;
 }
+
 .node__content {
-  /*max-width: 610px;*/
-  margin-top: 64px;
+  margin-top: 32px;
 }
 
 .hospital__date, .hospital__image-alt {
   color: var(--dark-grey);
 }
-
 
 /*blockquote*/
 blockquote {
@@ -24,7 +24,7 @@ blockquote {
   position: relative;
   text-align: left;
   max-width: 90%;
-  margin: 45px;
+  margin: 16px;
   padding: 40px;
 }
 blockquote::before {
@@ -73,11 +73,12 @@ blockquote::after {
 .hospital__body {
   margin-bottom: 32px;
 }
-p .align-left {
-  max-width: 289px;
-  margin-top: 24px;
-  margin-right: 32px ;
+p .align-left, .align-right {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px ;
 }
+
 p a {
   color: var(--main-color);
   white-space: nowrap;
@@ -105,4 +106,40 @@ color: black;
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+/*breakpoints*/
+/*narrow*/
+/*@media all and (min-width: 560px) and (max-width: 850px) {*/
+/*  body {*/
+/*    background-color: blue;*/
+/*  }*/
+/*}*/
+
+/*wide*/
+@media all and (min-width: 851px) {
+  .node__title {
+    font-size: 48px;
+  }
+
+  .node__content {
+    /*max-width: 610px;*/
+    margin-top: 64px;
+  }
+
+  blockquote {
+    margin: 45px;
+  }
+
+  p .align-left {
+    max-width: 289px;
+    margin-top: 24px;
+    margin-right: 32px ;
+  }
+
+  p .align-right {
+    max-width: 289px;
+    margin-top: 24px;
+    margin-left: 32px ;
+  }
 }

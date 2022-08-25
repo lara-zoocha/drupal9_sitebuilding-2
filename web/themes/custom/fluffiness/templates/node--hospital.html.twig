@@ -70,26 +70,21 @@
 
 {{ attach_library('fluffiness/hospitals') }}
 
-{%
-  set classes = [
+{% set classes = [
   'node',
   'node--type-' ~ node.bundle|clean_class,
   node.isPromoted() ? 'node--promoted',
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-]
-%}
-
+] %}
 
 <article{{ attributes.addClass(classes) }} style="background-color: {{ maria }}">
 
-  {%
-    set classes2 = [
+  {% set classes2 = [
     'title',
     'node__title',
-  ]
-  %}
+  ] %}
 
   {{ title_prefix }}
   <h2 {{ attributes.addClass(classes2) }} {{ title_attributes }}>
@@ -97,7 +92,7 @@
   </h2>
   {{ title_suffix }}
 
-  {#  content with sidebar#}
+  {#  content with sidebar #}
 
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content|without(
@@ -109,36 +104,29 @@
       'field_phone_number',
       'field_region'
     ) }}
-
     <div class="hospital__date">
-      {{ content.field_built_date}}
+      {{ content.field_built_date }}
     </div>
     <hr>
     <div class="hospital__image">
-      {{ content.field_header_image}}
+      {{ content.field_header_image }}
       <div class="hospital__image-alt">
         {{ content.field_header_image['#items'].alt }}
       </div>
     </div>
-
     <div class="hospital__body">
-      {{ content.body}}
+      {{ content.body }}
     </div>
-
     <div class="hospital__card-info">
       <h3 class="card-info__title">Info</h3>
       <div class="card-info__items">
-        {{ content.field_colour}}
-        {{ content.field_numer_of_patients}}
-        {{ content.field_phone_number}}
-        {{ content.field_region}}
+        {{ content.field_colour }}
+        {{ content.field_numer_of_patients }}
+        {{ content.field_phone_number }}
+        {{ content.field_region }}
       </div>
-
     </div>
-
   </div>
-
-  {#  -> include sidebar #}
 </article>
 
 
