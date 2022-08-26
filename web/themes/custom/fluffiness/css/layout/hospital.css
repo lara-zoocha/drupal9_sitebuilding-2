@@ -108,22 +108,79 @@ color: black;
   gap: 12px;
 }
 
+/*card*/
+.hospital__cards {
+  margin-top: 36px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.hospital__cards .paragraph--type--image-and-text {
+  background-color: var(--light-grey);
+  margin-bottom: 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 355px;
+}
+
+.hospital__cards img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 100%;
+}
+
+.hospital__cards .field--name-field-ph-image {
+  height: auto;
+  width: 100%;
+}
+
+.hospital__cards .field__label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  margin-bottom: 32px;
+}
+
+.hospital__cards .field--name-field-ph-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 16px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hospital__cards .field--name-field-ph-text::after {
+  content: url('../../images/icons/arrow-right.svg');
+  margin-bottom: 18px;
+}
+
 /*breakpoints*/
+
 /*narrow*/
-/*@media all and (min-width: 560px) and (max-width: 850px) {*/
-/*  body {*/
-/*    background-color: blue;*/
-/*  }*/
-/*}*/
+@media all and (min-width: 768px) {
+  .hospital__cards .field__items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 32px;
+  }
+}
 
 /*wide*/
-@media all and (min-width: 851px) {
+@media all and (min-width: 992px) {
   .node__title {
     font-size: 48px;
   }
 
+  article.node--type-hospital {
+    width: 70%;
+    max-width: 823px;
+  }
+
   .node__content {
-    /*max-width: 610px;*/
     margin-top: 64px;
   }
 
@@ -141,5 +198,20 @@ color: black;
     max-width: 289px;
     margin-top: 24px;
     margin-left: 32px ;
+  }
+
+  /*card*/
+  .hospital__cards {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+
+  .hospital__cards .paragraph--type--image-and-text {
+    width: min-content;
+  }
+
+  .hospital__cards .field--name-field-ph-image {
+    height: 180px;
+    width: 333px;
   }
 }
