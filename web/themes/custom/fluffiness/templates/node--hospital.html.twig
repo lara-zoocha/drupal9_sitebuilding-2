@@ -102,7 +102,8 @@
       'field_header_image',
       'field_numer_of_patients',
       'field_phone_number',
-      'field_region'
+      'field_region',
+      'field_image_and_text'
     ) }}
     <div class="hospital__date">
       {{ content.field_built_date }}
@@ -128,5 +129,6 @@
     </div>
   </div>
 </article>
-
-
+<div class="hospital__cards">
+  {{ content.field_image_and_text }}
+</div>
