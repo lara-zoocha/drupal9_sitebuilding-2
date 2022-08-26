@@ -1,5 +1,5 @@
 @import "base/variables.css";
-@import "layout/breakpoints.css";
+
 /*general*/
 
 *, *:after, *:before {
@@ -43,26 +43,12 @@ img {
   padding: 16px 20px;
 }
 
-/*.main-container {*/
-/*  display: flex;*/
-/*  justify-content: space-between;*/
-/*  width: 100%;*/
-/*}*/
-
 .layout-content {
   width: 100%;
 }
 
-/*.layout-sidebar {*/
-/*  background-color: var(--light-grey);*/
-/*  padding: 24px;*/
-/*  max-height: 300px;*/
-/*  margin-left: 32px;*/
-/*  width: 30%;*/
-/*}*/
-
 .layout-header {
-  border: 1px solid #E8EDEE;
+  border: 1px solid  var(--light-grey);
 }
 
 .block-system-branding-block {
@@ -74,58 +60,6 @@ footer {
   background-color: var(--light-grey);
 }
 
-/*article teaser*/
-
-.article-teaser__container, .hospital-teaser__container {
-  max-width: 824px;
-}
-
-.article-teaser__image .field__label {
-  display: none;
-}
-
-.article-teaser .node__links {
-  display: none;
-}
-
-.article-teaser__image {
-  width: 100%;
-}
-
-.article-teaser__content .node__title {
-  margin-bottom: 16px;
-}
-
-.node__title--article .field {
-  color: var(--main-color);
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.teaser__hr {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-/*hospital teaser*/
-.hospital-teaser .node__links {
-  display: none;
-}
-
-.node__title--hospital .field {
-  color: var(--main-color);
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/*breakpoints*/
-/*narrow TABLET*/
-/*@media all and (min-width: 560px) and (max-width: 850px) {*/
-/*  body {*/
-/*    background-color: blue;*/
-/*  }*/
-/*}*/
-
 /*wide DESKTOP*/
 @media all and (min-width: 851px) {
   .container {
@@ -135,16 +69,5 @@ footer {
   .layout-content {
     width: 70%;
     max-width: 823px;
-  }
-
-  .article-teaser {
-    display: flex;
-  }
-
-  .article-teaser__image {
-    order: -1;
-    width: 100%;
-    margin-right: 32px;
-    border-radius: 6px;
   }
 }

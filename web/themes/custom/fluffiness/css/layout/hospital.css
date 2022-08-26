@@ -15,7 +15,7 @@
 }
 
 /*blockquote*/
-blockquote {
+.hospital__body blockquote {
   text-decoration: none;
   font-style: normal;
   font-weight: 700;
@@ -27,7 +27,8 @@ blockquote {
   margin: 16px;
   padding: 40px;
 }
-blockquote::before {
+
+.hospital__body blockquote::before {
   content: url('../../images/icons/icon-quote-up.svg');
   vertical-align: top;
   position: absolute;
@@ -35,7 +36,8 @@ blockquote::before {
   left: -26px;
   top: -10px;
 }
-blockquote::after {
+
+.hospital__body blockquote::after {
   content: url('../../images/icons/icon-quote-down.svg');
   vertical-align: baseline;
   position: absolute;
@@ -45,21 +47,11 @@ blockquote::after {
   bottom: -10px;
 }
 
-.hospital__date .field__label {
-  display: none;
-}
-
-/*.hospital__image img::after {*/
-/*  content: attr(alt);*/
-/*}*/
-
 .hospital__image {
   margin-top: 32px;
   margin-bottom: 32px;
 }
-.hospital__image .field__label {
-  display: none;
-}
+
 .hospital__image-alt {
   margin-top: 16px;
 }
@@ -70,9 +62,11 @@ blockquote::after {
   font-size: 18px;
   line-height: 140%;
 }
+
 .hospital__body {
   margin-bottom: 32px;
 }
+
 p .align-left, .align-right {
   width: 100%;
   margin-top: 16px;
@@ -83,6 +77,7 @@ p a {
   color: var(--main-color);
   white-space: nowrap;
 }
+
 p a::after {
   content: url('../../images/icons/link.svg');
   margin-left: 8px;
@@ -108,14 +103,6 @@ color: black;
   gap: 12px;
 }
 
-/*breakpoints*/
-/*narrow*/
-/*@media all and (min-width: 560px) and (max-width: 850px) {*/
-/*  body {*/
-/*    background-color: blue;*/
-/*  }*/
-/*}*/
-
 /*wide*/
 @media all and (min-width: 851px) {
   .node__title {
@@ -123,7 +110,6 @@ color: black;
   }
 
   .node__content {
-    /*max-width: 610px;*/
     margin-top: 64px;
   }
 
@@ -142,4 +128,15 @@ color: black;
     margin-top: 24px;
     margin-left: 32px ;
   }
+}
+
+/*hospital teaser*/
+.hospital-teaser .node__links {
+  display: none;
+}
+
+.node__title--hospital .field {
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 18px;
 }
