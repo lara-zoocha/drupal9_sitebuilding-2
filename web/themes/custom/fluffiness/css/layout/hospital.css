@@ -161,10 +161,10 @@ p a::after {
 /*breakpoints*/
 
 /*narrow*/
-@media all and (min-width: 768px) {
-  .hospital__cards .field__items{
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .hospital__cards .field__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 32px;
   }
 }
@@ -213,5 +213,10 @@ p a::after {
   .hospital__cards .field--name-field-ph-image {
     height: 180px;
     width: 333px;
+  }
+
+  .hospital__cards .field__items {
+    display: flex;
+    gap: 32px;
   }
 }
