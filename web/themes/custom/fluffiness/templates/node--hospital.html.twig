@@ -77,9 +77,10 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'hospital--color-' ~ testvalue|lower|replace({'#': "-"}),
 ] %}
 
-<article{{ attributes.addClass(classes) }} style="background-color: {{ maria }}">
+<article{{ attributes.addClass(classes) }}>
 
   {% set classes2 = [
     'title',
@@ -90,6 +91,8 @@
   <h2 {{ attributes.addClass(classes2) }} {{ title_attributes }}>
     <span>{{ label }}</span>
   </h2>
+
+  <h3 style="background-color: {{ testvalue }}"> field colour is {{ testvalue }}</h3>
   {{ title_suffix }}
 
   {#  content with sidebar #}
