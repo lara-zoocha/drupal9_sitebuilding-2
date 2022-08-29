@@ -1,0 +1,78 @@
+.node__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+}
+
+.node__content {
+  margin-top: 64px;
+}
+
+.article__date, .article__image-alt {
+  color: var(--dark-grey);
+}
+
+.article__date .field__label {
+  display: none;
+}
+
+.article__image {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.article__image-alt {
+  margin-top: 16px;
+}
+
+.article__body p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.article__body .align-left {
+  max-width: 289px;
+  margin-top: 24px;
+  margin-right: 32px ;
+}
+
+/*article teaser*/
+.article-teaser__container, .hospital-teaser__container {
+  max-width: 824px;
+}
+
+.article-teaser__image {
+  width: 100%;
+}
+
+.article-teaser__content .node__title {
+  margin-bottom: 16px;
+}
+
+.node__title--article .field {
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.teaser__hr {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/*wide DESKTOP*/
+@media all and (min-width: 851px) {
+  .article-teaser {
+    display: flex;
+  }
+
+  .article-teaser__image {
+    order: -1;
+    width: 100%;
+    margin-right: 32px;
+    border-radius: 6px;
+  }
+}

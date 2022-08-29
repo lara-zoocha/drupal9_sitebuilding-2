@@ -23,7 +23,8 @@
         "drupal/core-recommended": "^9.4.5",
         "drupal/ds": "^3.13",
         "drupal/features": "^3.12",
-        "drupal/field_group": "^3.2"
+        "drupal/field_group": "^3.2",
+        "drupal/paragraphs": "^1.15"
     },
     "conflict": {
         "drupal/drupal": "*"

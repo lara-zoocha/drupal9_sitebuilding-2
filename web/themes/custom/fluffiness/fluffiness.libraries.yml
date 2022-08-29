@@ -1,0 +1,18 @@
+# fluffiness.libraries.yml
+#fluffiness:
+global:
+  css:
+    theme:
+      css/style.css: { }
+  js:
+    js/fluffiness.js: { }
+
+hospitals:
+  css:
+    theme:
+      css/layout/hospital.css: { }
+
+articles:
+  css:
+    theme:
+      css/layout/article.css: { }
