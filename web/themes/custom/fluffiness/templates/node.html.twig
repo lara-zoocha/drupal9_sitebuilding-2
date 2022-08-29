@@ -77,42 +77,25 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{#{{ attach_library('icecream/style') }}#}
 
 {{ attach_library('fluffiness/global') }}
 
-{#{{ dump () }}#}
-
 <article{{ attributes.addClass(classes) }}>
-
-
-
   {%
     set classes2 = [
     'title',
     'node__title',
   ]
   %}
-
   {{ title_prefix }}
   {% if label and not page %}
     <h2 {{ attributes.addClass(classes2) }} {{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
   {% endif %}
-
-
-
   {# <a href="example.com" class="cool-link"> cool link</a> #}
-
   {{ title_suffix }}
-
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
   </div>
-
-
-
 </article>
-
-

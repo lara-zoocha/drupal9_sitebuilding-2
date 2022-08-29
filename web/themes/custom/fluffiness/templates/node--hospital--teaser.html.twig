@@ -78,16 +78,16 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ] %}
 
-{{ attach_library('fluffiness/global') }}
+{{ attach_library('fluffiness/hospitals') }}
 
 <div class="hospital-teaser__container">
   <div{{ attributes.addClass(classes1) }}>
     {# TITULO & BODY #}
     <div class="hospital-teaser__content">
-      <h2 class="title node__title node__title--hospital" {{ title_attributes }}>
+      <h2 class="title node__title hospital-teaser__title" {{ title_attributes }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
-      <div class="hospital-teaser__content">
+      <div class="hospital-teaser__body">
         {{ content|without('field_tags') }}
       </div>
     </div>
