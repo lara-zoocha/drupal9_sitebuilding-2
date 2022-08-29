@@ -1,7 +1,6 @@
 @import "base/variables.css";
 
 /*general*/
-
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

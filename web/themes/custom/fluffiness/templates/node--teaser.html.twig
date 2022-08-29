@@ -78,39 +78,24 @@
 ]
 %}
 
-
 {{ attach_library('fluffiness/global') }}
 
-{#{{ dump () }}#}
-
 <article{{ attributes.addClass(classes) }}>
-
   {# TITULO EN LA FRONTPAGE #}
   {{ title_prefix }}
-
   <h2 class="title node__title node__title--article" {{ title_attributes }}>
     <a href="{{ url }}" rel="bookmark">{{ label }}</a>
   </h2>
-
   {{ title_suffix }}
-
-
   <div class="article-tags">
     {{ content.field_tags }}
   </div>
-
   {% if display_submitted %}
     <div class="node__meta article__date">
-
       <div{{ author_attributes.addClass('node__submitted') }}>
         {% trans %} Submitted by {{ author_name }} on {{ date }}{% endtrans %}
         {{ metadata }}
       </div>
-
     </div>
   {% endif %}
-
-
 </article>
-
-

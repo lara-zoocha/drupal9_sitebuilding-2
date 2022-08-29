@@ -79,9 +79,7 @@
 ]
 %}
 
-
 {{ attach_library('fluffiness/articles') }}
-
 
 <div class="article-teaser__container">
   <article{{ attributes.addClass(classes1) }}>
@@ -94,11 +92,10 @@
       <h2 class="title node__title node__title--article" {{ title_attributes }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
-      <div class="article-teaser__content">
+      <div class="article-teaser__body">
         {{ content|without('field_tags', 'field_image') }}
       </div>
     </div>
-
   </article>
   <hr class="teaser__hr">
 </div>

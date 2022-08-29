@@ -95,15 +95,6 @@
   {#  content with sidebar #}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without(
-      'body',
-      'field_built_date',
-      'field_colour',
-      'field_header_image',
-      'field_numer_of_patients',
-      'field_phone_number',
-      'field_region'
-    ) }}
     <div class="hospital__date">
       {{ content.field_built_date }}
     </div>
@@ -128,5 +119,3 @@
     </div>
   </div>
 </article>
-
-

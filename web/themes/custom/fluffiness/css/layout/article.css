@@ -33,14 +33,13 @@
   line-height: 140%;
 }
 
-p .align-left {
+.article__body .align-left {
   max-width: 289px;
   margin-top: 24px;
   margin-right: 32px ;
 }
 
 /*article teaser*/
-
 .article-teaser__container, .hospital-teaser__container {
   max-width: 824px;
 }

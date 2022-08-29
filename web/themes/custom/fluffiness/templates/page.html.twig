@@ -46,7 +46,6 @@
 {{ attach_library('fluffiness/global') }}
 
 <div class="layout-container">
-
   <header role="banner" class="layout-header container">
     {{ page.header }}
   </header>
@@ -59,20 +58,11 @@
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div class="layout-content">
         {{ page.content }}
-      </div>{# /.layout-content #}
-{#      <div class="layout-sidebar">#}
-{#        {% if page.sidebar_second %}#}
-{#          <aside class="layout-sidebar-first" role="complementary">#}
-{#            {{ page.sidebar_second }}#}
-{#          </aside>#}
-{#        {% endif %}#}
-{#      </div>#}
+      </div>
   </main>
-
   {% if page.footer %}
     <footer role="contentinfo" class="container">
       {{ page.footer }}
     </footer>
   {% endif %}
-
 </div>{# /.layout-container #}
