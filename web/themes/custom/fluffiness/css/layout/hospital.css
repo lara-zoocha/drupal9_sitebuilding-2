@@ -170,7 +170,7 @@
     font-size: 48px;
   }
 
-  article.node--type-hospital {
+  .node--type-hospital {
     width: 70%;
     max-width: 823px;
   }
