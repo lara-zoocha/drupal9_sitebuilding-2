@@ -77,9 +77,18 @@
   node.isSticky() ? 'node--sticky',
   not node.isPublished() ? 'node--unpublished',
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-] %}
 
-<article{{ attributes.addClass(classes) }} style="background-color: {{ maria }}">
+] %}
+{#  {% set my_attribute = create_attribute() %}#}
+{% if testvalue %}
+  {%
+    set customClass = [
+    'hospital__color-' ~ testvalue|lower|replace({'#': "-"}),
+  ]
+  %}
+{% endif %}
+
+<article{{ attributes.addClass(classes).addClass(customClass) }}>
 
   {% set classes2 = [
     'title',
@@ -87,7 +96,7 @@
   ] %}
 
   {{ title_prefix }}
-  <h2 {{ attributes.addClass(classes2) }} {{ title_attributes }}>
+  <h2 {{ attributes.addClass(classes2).addClass(customClass) }} {{ title_attributes }}>
     <span>{{ label }}</span>
   </h2>
   {{ title_suffix }}
@@ -119,6 +128,7 @@
     </div>
   </div>
 </article>
+
 <div class="hospital__cards">
   {{ content.field_image_and_text }}
 </div>

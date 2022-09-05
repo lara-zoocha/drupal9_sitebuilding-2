@@ -51,6 +51,16 @@ function theme_preprocess_paragraph(&$variables) {
 
 
 /**
+ * Preprocess function for node--hospital.html.twig.
+ */
+function fluffiness_preprocess_node__hospital(&$variables) {
+  // Get color.
+  if (!$variables['node']->get('field_colour')->isEmpty()) {
+    $variables['testvalue'] = $variables['node']->get('field_colour')[0]->getValue()['color'];
+  }
+}
+
+/**
  * Implements hook_preprocess_node().
  * function fluffiness_preprocess_page(&$variables) {
  *   $a = 1;

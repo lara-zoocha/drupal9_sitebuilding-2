@@ -153,6 +153,14 @@
   margin-bottom: 18px;
 }
 
+.hospital__color--c1ff76 {
+  border-left: 2px solid #C1FF76;
+}
+
+.hospital__color--76bfff {
+  border-left: 2px solid #76bfff;
+}
+
 /*breakpoints*/
 
 /*narrow*/
