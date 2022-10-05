@@ -1,0 +1,18 @@
+<fieldset class="form-fieldset form-fieldset--date{% if date_error %} form-item--error{% endif %}">
+  <legend class="heading--small">When was your passport issued?</legend>
+  <p class="form-item__description">For example, 12 11 2007</p>
+  <div class="form-items">
+    <div class="form-item">
+      <label for="day" class="form-item__label form-item__label--textfield">Day</label>
+      <input id="day" type="text" pattern="[0-9]*" inputmode="numeric" class="form-item__textfield">
+    </div>
+    <div class="form-item">
+      <label for="month" class="form-item__label form-item__label--textfield">Month</label>
+      <input id="month" type="text" pattern="[0-9]*" inputmode="numeric" class="form-item__textfield">
+    </div>
+    <div class="form-item">
+      <label for="year" class="form-item__label form-item__label--textfield">Year</label>
+      <input id="year" type="text" pattern="[0-9]*" inputmode="numeric" class="form-item__textfield">
+    </div>
+  </div>
+</fieldset>

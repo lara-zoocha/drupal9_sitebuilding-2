@@ -1,0 +1,91 @@
+
+.button {
+  background: clr(button-default-bg);
+  border: 0;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-default;
+  color: clr(button-default-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-family: $font-heading;
+  font-size: 1.4rem;
+  font-weight: $font-bold;
+  line-height: 1;
+  padding: 1.5rem 3.1rem 1.6rem;
+  transition:
+    background 0.25s ease-in-out,
+    box-shadow 0.15s ease-in-out,
+    color 0.1s ease-in-out,
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    background: clr(button-default-hover-bg);
+    color: clr(button-default-color);
+  }
+
+  &:focus {
+    border-color: clr(button-default-outline);
+    outline-color: clr(button-default-outline);
+  }
+
+  &:active {
+    background-color: clr(button-default-active-bg);
+    border-color: clr(button-default-outline);
+    color: clr(button-default-active-color);
+    outline-color: clr(button-default-outline);
+  }
+
+  &:visited {
+    color: clr(button-default-color);
+  }
+}
+
+.button--icon {
+  .icon {
+    margin-left: $padding-default;
+    height: 1.2rem;
+    width: 1.5rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+    fill: currentColor;
+  }
+}
+
+/// Secondary buttons
+.button--secondary {
+  background-color: clr(button-secondary-bg);
+  border-color: clr(button-secondary-color);
+  color: clr(button-secondary-color);
+
+  &:hover {
+    background-color: clr(button-secondary-hover-bg);
+    color: clr(button-secondary-hover-color);
+  }
+
+  &:focus {
+    background-color: clr(button-secondary-hover-bg);
+    border-color: clr(button-secondary-outline);
+    outline-color: clr(button-secondary-outline);
+    color: clr(button-secondary-hover-color);
+
+  }
+
+  &:active {
+    background-color: clr(button-secondary-active-bg);
+    color: clr(button-secondary-active-color);
+  }
+
+  &:visited {
+    color: clr(button-secondary-color);
+  }
+}
+
+@include medium {
+  .button {
+    width: auto;
+  }
+}

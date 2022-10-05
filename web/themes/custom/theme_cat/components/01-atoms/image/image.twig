@@ -1,0 +1,21 @@
+{#
+/**
+ * Available variables:
+ * - alert_base_class - the base classname
+ * - alert_modifiers - array of modifiers to add to the base classname to identify what type of alert (e.g. danger)
+ * - alert_blockname - blockname prepended to the base classname
+ *
+ * - alert__content - the content of the alert (typically text)
+ *
+ * Available blocks:
+ * - alert_content - used to replace the content of the blockquote with something other than text
+ *   for example: A formatted text field in Drupal
+ */
+#}
+
+<picture>
+  <source src="{{ image_src }}" srcset="https://picsum.photos/{{ desktop_size }}" media="(min-width: 998px)">
+  <source src="{{ image_src }}" srcset="https://picsum.photos/{{ tablet_size }}" media="(min-width: 600px)">
+  <source src="{{ image_src }}" srcset="https://picsum.photos/{{ mobile_size }}" media="(max-width: 600px)">
+  <img alt="Alt text">
+</picture>
