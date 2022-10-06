@@ -22,6 +22,7 @@
 {{ attribute }}="{{ value }}"
 {% endfor %}
 href="{{ link_url }}"
+aria-label="{{ link_aria_label }}"
 >
 {%- block link_content -%}
   {{ link_content|raw }}

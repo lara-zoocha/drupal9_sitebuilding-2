@@ -60,6 +60,7 @@ Card.args = {
   card_text:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
   card_link_url: '#',
+  card_link_aria_label: 'Aria Label',
   card_image_src:
     'https://i.picsum.photos/id/302/720/560.jpg?hmac=rlt3xSx7IxnixPOoBX6_RG4RyMdEzmxkqwMTMCVef9M',
 };

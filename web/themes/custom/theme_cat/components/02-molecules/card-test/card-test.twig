@@ -80,7 +80,8 @@
       {% if card_link_url %}
         <div {{ bem('link', [], card_base_class) }}>
           {% include "@atoms/link/link.twig" with {
-            link_url: card_link_url
+            link_url: card_link_url,
+            link_aria_label: card_link_aria_label
           } %}
         </div>
       {% endif %}
