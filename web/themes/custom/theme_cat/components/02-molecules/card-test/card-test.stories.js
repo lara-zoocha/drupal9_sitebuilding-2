@@ -1,6 +1,5 @@
 import React from 'react';
 import template from './card-test.twig';
-import './card-test';
 
 export default {
   title: 'Molecules/Card-Test',

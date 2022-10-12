@@ -8,6 +8,7 @@
   margin-bottom: $padding-large;
   background-color: clr(off-white);
   border-radius: $border-radius*3;
+
   &:hover {
     cursor: pointer;
   }
@@ -23,30 +24,6 @@
     border-top-right-radius: $border-radius*3;
   }
 
-  &__content {
-    width: 100%;
-    height: 50%;
-    background-color: clr(wht);
-    padding: $padding-large $padding-default;
-    border-top: 0;
-  }
-
-  &__date {
-    line-height: 1.5;
-    font-weight: 700;
-    font-size: 2.1rem;
-    color: clr(blackest);
-  }
-
-  &__heading {
-    font-weight: 400;
-    margin-top: 2.4rem;
-    a {
-      color: clr(blackest);
-      text-decoration: none;
-    }
-  }
-
   .icon {
     display: inline-block;
     height: 2.1rem;
@@ -55,15 +32,40 @@
     vertical-align: text-top ;
     width: 2.4rem;
   }
+}
 
-  &__link {
-    a {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.card-test__content {
+  width: 100%;
+  height: 50%;
+  background-color: clr(wht);
+  padding: $padding-large $padding-default;
+  border-top: 0;
+}
+
+.card-test__date {
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: clr(blackest);
+}
+
+.card-test__heading {
+  font-weight: 400;
+  margin-top: 2.4rem;
+  a {
+    color: clr(blackest);
+    text-decoration: none;
   }
 }
+
+.card-test__link {
+  a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
