@@ -1,0 +1,13 @@
+{% if text_type == 'text' %}
+<div class="form-item{% if text_error %} form-item--error{% endif %}">
+  <label for="edit-name" class="form-item__label form-item__label--required form-item__label--textfield">{{ text_title }}</label>
+  <p class="form-item__description">{{ text_description }}</p>
+  <input id="edit-name" autocorrect="none" autocapitalize="none" spellcheck="false" aria-describedby="edit-name--description" type="text" name="name" value="" size="60" maxlength="60" class="form-item__textfield form-item__textfield--required" required="required" aria-required="true">
+</div>
+{% else %}
+  <div class="form-item{% if text_error %} form-item--error{% endif %}">
+    <label for="textarea" class="form-item__label form-item__label--textfield">{{ text_title }}</label>
+    <p class="form-item__description">{{ text_description }}</p>
+    <textarea id="textarea" class="form-item__textfield form-item__textarea"  rows="8" cols="48"></textarea>
+  </div>
+{% endif %}

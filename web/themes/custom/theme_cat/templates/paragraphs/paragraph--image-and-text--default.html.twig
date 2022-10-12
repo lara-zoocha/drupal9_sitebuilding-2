@@ -1,0 +1,14 @@
+{% set link_aria_label = 'Read more about '|t ~ content.field_ph_text.0|render %}
+{% embed "@molecules/card-test/card-test.twig" with {
+  card_image_src: content.field_ph_image.0['#media'],
+  card_date: content.field_date.0,
+  card_title: content.field_ph_text.0,
+  card_heading_level: content['#heading_level'],
+  card_link_url: content.field_link.0["#url"],
+  card_link_aria_label: link_aria_label,
+  card_link_id: paragraph.id(),
+} %}
+  {% block card_image %}
+    {{ content.field_ph_image.0 }}
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,40 @@
+/* Create a mixin for paragraph styles that can be implemented
+ * in components with other classnames.
+*/
+@mixin paragraph($margin: 0 0 1rem) {
+  margin: $margin;
+  line-height: 1.5;
+}
+
+p,
+.paragraph {
+  @include paragraph;
+}
+
+.paragraph--xs {
+  @include fntpair(body-xs);
+}
+
+.paragraph--small {
+  @include fntpair(body-3);
+}
+
+.paragraph--medium {
+  @include fntpair(body-2);
+}
+
+.paragraph--large {
+  @include fntpair(body-1);
+}
+
+.paragraph--strong {
+  font-weight: $font-semibold;
+}
+
+.paragraph--extra-margin-bottom {
+  margin-bottom: $space-double;
+}
+
+.paragraph--no-margin {
+  margin: 0;
+}

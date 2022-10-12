@@ -1,0 +1,30 @@
+{#
+/**
+ * Available variables:
+ * - ul_base_class - the base classname
+ * - ul_modifiers - array of modifiers to add to the base classname
+ * - ul_blockname - blockname prepended to the base classname
+ *
+ * - listItems - TBD
+ */
+#}
+{% set list_type = list_type|default('ul') %}
+{% if list_style %}
+  {% set list_modifiers = button_modifiers|default([])|merge([list_style]) %}
+{% endif %}
+{% set list_base_class = ul_base_class|default(list_type) %}
+
+<{{ list_type }} {{ bem(list_base_class, list_modifiers, list_blockname, list_extra_classes) }}>
+  {% block list_content %}
+    {% for list_item in list_items %}
+      {% include "@atoms/list/_list-item.twig" with {
+        list_item_label: list_item.label,
+        list_item_content: list_item.content,
+        li_base_class: list_item.li_base_class,
+        li_base_class: list_item.li_base_class,
+        li_modifiers: list_item.li_modifiers,
+        li_blockname: list_item.li_blockname,
+      } %}
+    {% endfor %}
+  {% endblock %}
+</{{ list_type }}>
